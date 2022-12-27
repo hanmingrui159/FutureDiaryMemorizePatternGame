@@ -23,6 +23,15 @@ $(".btn").click(function(e){
         //game fail
         currLevel = -1;
         $("h1").html("Game Over, Press Any Key to Restart")
+        
+        $("body").addClass("game-over");
+        $("body").css("background-image", "none");
+        setTimeout(function(){$("body").removeClass("game-over");}, 200)
+        setTimeout(function(){$("body").css("background-image", "url(images/wallpaper.jpg)")}, 300);
+        
+        // play wrong sound
+        var audio = new Audio("sounds/wrong.mp3");
+        audio.play();
     }
     else if (userClickedPattern.length == gamePattern.length) {
         currLevel++;
