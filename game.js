@@ -14,10 +14,6 @@ $(".btn").click(function(e){
     animatePress(userChosenColor);
 
     // DIY
-    if (userClickedPattern.length > gamePattern.length) {
-        alert("an unexpected error happened!");
-    }
-
     var lastIndex = userClickedPattern.length - 1;
     if (userClickedPattern[lastIndex] != gamePattern[lastIndex]){
         //game fail
